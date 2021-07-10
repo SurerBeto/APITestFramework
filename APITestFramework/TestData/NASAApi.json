@@ -1,0 +1,26 @@
+﻿[
+    {
+
+        "Type": "GET",
+        "Name": "Planetary",
+        "Url": "https://api.nasa.gov/planetary/apod",
+        "Key": "M9Q2sHt0euLoD62egx38GrReG9Z2HmCNoqQIL8dY"
+
+    },
+    {
+
+        "Type": "GET",
+        "Name": "Techtransfer Patent",
+        "Url": "https://api.nasa.gov/techtransfer/patent/",
+        "Key": "M9Q2sHt0euLoD62egx38GrReG9Z2HmCNoqQIL8dY"
+
+    },
+    {
+
+        "Type": "GET",
+        "Name": "Techtransfer Software",
+        "Url": "https://api.nasa.gov/techtransfer/software/",
+        "Key": "M9Q2sHt0euLoD62egx38GrReG9Z2HmCNoqQIL8dY"
+
+    }
+]
