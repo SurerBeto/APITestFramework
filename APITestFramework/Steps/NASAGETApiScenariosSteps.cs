@@ -13,14 +13,14 @@ using NUnit.Framework;
 namespace APITestFramework.Steps
 {
     [Binding]
-    public sealed class NASAGETApiScenariosSteps
+    public class NASAGETApiScenariosSteps
     {
         private Settings _settings;
         public NASAGETApiScenariosSteps(Settings settings) => _settings = settings;
         public List<NASAApi> jsonData; 
 
-        [Given(@"The API information is loaded")]
-        public void GivenTheAPIInformationIsloaded()
+        [Given(@"The NASA API information is loaded")]
+        public void GivenTheNASAAPIInformationIsloaded()
         {
             _settings.Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, _settings.File);
             jsonData = JsonConvert.DeserializeObject<List<NASAApi>>(File.ReadAllText(_settings.Path).ToString());
@@ -30,7 +30,6 @@ namespace APITestFramework.Steps
         public void WhenTheNASAAPIGetsCalled(string ApiName)
         {
             int index = jsonData.FindIndex(i => i.Name == ApiName);
-            Console.WriteLine(index);
             string Url = jsonData[index].Url;
             string Key = jsonData[index].Key;
             Method Type = jsonData[index].Type;

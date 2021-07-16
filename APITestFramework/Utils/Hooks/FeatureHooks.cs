@@ -17,12 +17,19 @@ namespace APITestFramework.Utils.Hooks
         }
 
         [BeforeScenario("NASAGETApiScenarios")]
-        public void BeforeFeature(FeatureContext featurecontext)
+        public void BeforeFeatureNasa(FeatureContext featurecontext)
         {
             _settings.File = @"TestData\NASAApi.json";
             Console.WriteLine("Starting " + featurecontext.FeatureInfo.Title);
-            Console.WriteLine(_settings.Path);
         }
+
+        [BeforeScenario("TubularPostApiScenarios")]
+        public void BeforeScenarioTubular(FeatureContext featurecontext)
+        {
+            _settings.File = @"TestData\TubularAPI.json";
+            Console.WriteLine("Starting " + featurecontext.FeatureInfo.Title);
+        }
+
         [AfterScenario]
         public void AfterFeature(ScenarioContext scenarioContext)
         {

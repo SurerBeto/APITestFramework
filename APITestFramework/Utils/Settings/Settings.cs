@@ -13,6 +13,7 @@ namespace APITestFramework.Utils.Settings
         public RestClient RestClient { get; set; } = new RestClient();
         public string File { get; set; }
         public string Path { get; set; }
+        public string Body { get; set; }
         
     }
 }

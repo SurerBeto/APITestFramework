@@ -1,0 +1,5 @@
+﻿    {
+        "Type": "POST",
+        "Name": "Tubular",
+        "Url": "https://tubular.azurewebsites.net/api/orders/paged"
+    }
